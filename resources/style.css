@@ -1,0 +1,768 @@
+/*
+                   
+|__)_  _ _|_  _  _ _ |_  _)                     
+|  (_|| (_| )|||(-| )|_ /__                     
+                                                
+ __                            _                
+/   _ _ _ |_ _ _|  |_     . _ (_. _ .|_  |_ _ _ 
+\__| (-(_||_(-(_|  |_)\/  || )| || )||_\/|_(-(_ 
+                      /                /        
+
+					  
+			--Theme notes--
+	
+	This code is liscenced under the GNU General Public License, version 2. For a copy of the license, please see https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html .
+	
+	Note: colors uses are either Hex or RGBA. RGBA is used to add transparency easily. For more information on colors, see https://www.w3schools.com/cssref/css_colors_legal.asp .
+	
+	Page background image (applied to body): background.jpg
+	Blurred background image (applied to .landing, .full, .half, and .quarter): background-blurred.jpg
+	Background color (applied to header): rgba(10, 10, 10, 1)
+	Background color with minimal transparency (applied to the navigation menu, navigation dropdown, and code): rgba(10, 10, 10, 0.99)
+	Tint color (applied to .content): rgba(10, 10, 10, 0.75)
+	Highlight color (applied to h1 background, buttons, and large links): #555
+	Text color (applied to all text): #FFF
+	Hader font (applied to headers and nav): Josefin Sans, weight: 300
+	Body text (applied to p, span, etc.): Raleway, weight: regular
+	Code (applied to code): Source Code Pro, weight: regular
+*/
+
+
+/*				Import fonts					*/
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300|Raleway|Source+Code+Pro');
+@media screen {
+  /*				Colors and Backgrounds			*/
+  body {
+    /*Page background*/
+    background: url(background.jpg);
+    /*The properties for the page background should be the same as those for the blurred background.*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+  .landing,
+  .full,
+  .threequarters,
+  .half,
+  .quarter {
+    /*Blurred background. For use of a non-blurred background, use the same image as the page background, or say 'none'.*/
+    background: url(background-blurred.jpg);
+    /*The properties for the blurred background should be the same as those for the page background.*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+  .content {
+    /*Overlay color for content. Tints the blurred background.*/
+    background: rgba(10, 10, 10, 0.75);
+  }
+  header {
+    /*Header background*/
+    background: rgba(10, 10, 10, 1);
+  }
+  #navbar,
+  footer,
+  code,
+  nav:hover #dropdown-main,
+  .dropdown-content,
+  fieldset {
+    /*Navbar, nav dropdown, code, and footer*/
+    background: rgba(10, 10, 10, 0.99);
+  }
+  .content h1,
+  nav a,
+  a.button,
+  button,
+  th,
+  td,
+  input,
+  textarea {
+    background: #555;
+  }
+  /*			Fonts, font colors, font styles, etc.			*/
+  h1 {
+    /*Main header*/
+    font-family: 'Josefin Sans', sans-serif;
+    color: #FFF;
+    font-size: 2em;
+    font-style: normal;
+    font-weight: 300;
+    text-align: center;
+  }
+  .landing h1 {
+    /*Landing page text*/
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 3.5em;
+    color: #FFF;
+  }
+  .footer-content h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+    font-size: 3.5em;
+    color: #FFF;
+  }
+  h2,
+  th {
+    /*Secondary header and table header*/
+    font-family: 'Josefin Sans', sans-serif;
+    color: #FFF;
+    font-size: 1.5em;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+  }
+  h3 {
+    /*Tertiary header*/
+    font-family: 'Josefin Sans', sans-serif;
+    color: #FFF;
+    font-size: 1.5em;
+    font-style: normal;
+    font-weight: 300;
+    text-align: center;
+  }
+  h4 {
+    /*Level 4 header*/
+    font-family: 'Josefin Sans', sans-serif;
+    color: #FFF;
+    font-size: 1.5em;
+    font-style: italic;
+    font-weight: 300;
+    text-align: center;
+  }
+  h5 {
+    /*Level 5 header*/
+    font-family: 'Josefin Sans', sans-serif;
+    color: #FFF;
+    font-size: 1.5em;
+    font-style: normal;
+    font-weight: 300;
+    text-align: left;
+  }
+  h6 {
+    /*Level 6 header*/
+    font-family: 'Josefin Sans', sans-serif;
+    color: #FFF;
+    font-size: 1.5em;
+    font-style: italic;
+    font-weight: 300;
+    text-align: left;
+  }
+  nav,
+  nav a,
+  a.button,
+  button {
+    /*Navigation menu*/
+    font-family: 'Josefin Sans', sans-serif;
+    color: #FFF;
+    font-size: 1.1em;
+    font-style: normal;
+    font-weight: 300;
+    text-align: center;
+    text-decoration: none;
+  }
+  body {
+    /*Body text*/
+    font-family: 'Raleway', sans-serif;
+    color: #FFF;
+    text-decoration-color: #FFF;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 300;
+    text-align: left;
+  }
+  code {
+    /*Code*/
+    font-family: 'Source Code Pro', monospace;
+    color: #FFF;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 300;
+    text-align: left;
+  }
+  td {
+    /*Table data*/
+    font-family: 'Raleway', sans-serif;
+    color: #FFF;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 300;
+    text-align: center;
+  }
+  mark {
+    /*Highlighted text*/
+    background: #FFF;
+    color: rgb(10, 10, 10);
+  }
+  ins,
+  ins p {
+    /*Inserted text*/
+    background: white;
+    color: black;
+    text-decoration: none;
+  }
+  ol {
+    /*Ordered list*/
+    list-style-type: upper-roman;
+  }
+  ul {
+    /*Unordered list*/
+    list-style-type: square;
+  }
+  /*			General Styles			*/
+  body {
+    height: auto;
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+  }
+  /*Header*/
+  header {
+    text-align: center;
+    padding: 10px;
+  }
+  header img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+  }
+  /*Navbar*/
+  #navbar {
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    top: -1px;
+    padding: 1em 5% 1em 5%;
+    z-index: 200;
+    width: 100%;
+    height: 3.5em;
+  }
+  _:-ms-lang(x),
+  #navbar {
+    /*Browser hack to properly support IE and Edge. W3C validator does not like this.*/
+    position: relative;
+  }
+  #navbar h1 {
+    /*Page title*/
+    display: inline;
+    position: absolute;
+    right: 15%;
+    top: 0.4em;
+    width: auto;
+    max-width: 45%;
+    height: auto;
+    height: 1em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 5px;
+    line-height: 1.1em;
+  }
+  nav {
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0.5em 0 1em 10%;
+    text-align: center;
+    display: block;
+    position: relative;
+    top: -1.25em;
+    left: -10%;
+    overflow: visible;
+  }
+  nav:hover {
+    -webkit-transition: height 0.2s ease;
+    /* Safari 3.1 to 6.0 */
+    transition: height 0.2s ease;
+    width: 30em;
+    height: 16em;
+  }
+  nav #dropdown-main {
+    height: 0;
+    width: 0;
+    padding: 1em;
+    overflow: hidden;
+    display: none;
+    position: relative;
+    top: 0.6em;
+    left: -10%;
+  }
+  nav:hover #dropdown-main {
+    display: block;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+  }
+  #dropdown-main .dropdown-menu {
+    display: inline-block;
+    width: 17em;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    right: 0.85em;
+  }
+  #dropdown-main .dropdown-content {
+    height: 0;
+    width: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 101;
+  }
+  #dropdown-main .dropdown-menu:hover .dropdown-content {
+    transition: height 0.5s ease;
+    height: 10em;
+    width: 100%;
+    padding: 0.8em;
+    position: relative;
+    left: 1px;
+    top: -10px;
+  }
+  /*Navigation links and content buttons*/
+  nav a,
+  a.button,
+  button,
+  input {
+    display: inline-block;
+    width: 15em;
+    padding: 1em;
+    margin: 0 0 0.5em 0;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+  }
+  nav a.dropdown {
+    /*Main dropdown button*/
+    display: block;
+    width: 5em;
+    cursor: pointer;
+    height: auto;
+    position: relative;
+    top: 0.5em;
+  }
+  nav:hover a.dropdown {
+    -webkit-transition: all 0.2s ease;
+    /* Safari 3.1 to 6.0 */
+    transition: all 0.2s ease;
+    -webkit-filter: brightness(121%);
+    /* Safari 6.0 - 9.0 */
+    filter: brightness(121%);
+  }
+  nav a:hover,
+  .content a:hover,
+  a.button:hover,
+  button:hover,
+  th:hover,
+  td:hover,
+  input:hover,
+  textarea:hover {
+    /*Hovered objects (for Nav, .content a, a.button, button, forms, and tables)*/
+    -webkit-transition: all 0.2s ease;
+    /* Safari 3.1 to 6.0 */
+    transition: all 0.2s ease;
+    -webkit-filter: brightness(120%);
+    /* Safari 6.0 - 9.0 */
+    filter: brightness(120%);
+  }
+  nav a:active,
+  .content a:active,
+  a.button:active,
+  button:active,
+  th:active,
+  td:active,
+  input:active,
+  textarea:active {
+    /*Active objects (for Nav, .content a, a.button, button, forms, and tables)*/
+    -webkit-transition: all 0.2s ease;
+    /* Safari 3.1 to 6.0 */
+    transition: all 0.2s ease;
+    -webkit-filter: brightness(150%);
+    /* Safari 6.0 - 9.0 */
+    filter: brightness(150%);
+  }
+  a[href^="#"] {
+    /*Make links to the current page stand out.*/
+    -webkit-transition: all 0.2s ease;
+    /* Safari 3.1 to 6.0 */
+    transition: all 0.2s ease;
+    -webkit-filter: brightness(140%);
+    /* Safari 6.0 - 9.0 */
+    filter: brightness(140%);
+  }
+  #dropdown-main .dropdown-menu:hover .dropdown-content a {
+    width: 13em;
+    margin: 0 0 0.5em 0;
+  }
+  .center {
+    display: block;
+    position: relative;
+    left: calc(50% - 3.5em);
+  }
+  /*Layouts*/
+  main {
+    width: calc(100% - 4em);
+    margin: 0 2em 0.5em 2em;
+    height: auto;
+  }
+  .landing {
+    display: inline-block;
+    margin: 0 0 0.5em 0;
+    padding: 0;
+    height: auto;
+    width: calc(100% + 4em);
+    position: relative;
+    left: -2em;
+    top: -1px;
+  }
+  .full,
+  .half,
+  .threequarters,
+  .quarter {
+    display: inline-block;
+    margin: 0.5em;
+    padding: 0;
+    overflow: visible;
+    height: auto;
+  }
+  .full {
+    width: calc(100% - 1em);
+  }
+  .half {
+    width: calc(50% - 1em);
+    float: left;
+  }
+  .quarter {
+    width: calc(25% - 1em);
+    float: left;
+  }
+  .threequarters {
+    width: calc(75% - 1em);
+    float: left;
+  }
+  .clear {
+    clear: both;
+  }
+  .clear {
+    clear: both;
+  }
+  .right {
+    float: right;
+  }
+  .content {
+    width: calc(100% - 4em);
+    min-height: 5em;
+    padding: 2em;
+    overflow: hidden;
+  }
+  .landing .content {
+    padding: 0.5em;
+    width: calc(100% - 1em);
+  }
+  /*text*/
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0.5em 0;
+    width: calc(100% + 2em);
+    overflow-x: hidden;
+    padding: 0.5em 0;
+    position: relative;
+    right: 1em;
+  }
+  .landing h1 {
+    width: 100%;
+    margin: 0;
+    padding: 1.5em 0 1.5em 0;
+    text-align: center;
+    background: none;
+    right: 0;
+  }
+  h5,
+  h6 {
+    right: 0;
+  }
+  p,
+  span {
+    width: 100%;
+  }
+  /*Images*/
+  .content img {
+    width: auto;
+    height: auto;
+    margin: auto;
+    display: block;
+    max-width: 100%;
+  }
+  /*Links and buttons*/
+  .content a {
+    text-decoration: underline;
+    padding: 0;
+    color: inherit;
+  }
+  .content p a {
+    padding: 0;
+  }
+  a.button,
+  button {
+    margin: 1em;
+    width: auto;
+    padding: 1em;
+    text-decoration: none;
+  }
+  button {}
+  p a.button {
+    padding: 1px 3px 1px 3px;
+    margin: 0.1em;
+  }
+  /*Lists*/
+  ol,
+  ul {
+    width: calc(100% - 2em);
+    padding: 0 2em 0 2em;
+    position: relative;
+    left: 2em;
+  }
+  li {
+    margin: 0.5em;
+  }
+  /*Table*/
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    border-spacing: 0.5em;
+  }
+  caption {
+    width: 100%;
+    text-align: center;
+  }
+  tbody {
+    display: block;
+    width: 100%;
+  }
+  td,
+  th {
+    min-width: 5em;
+    padding: 1em;
+    text-align: center;
+  }
+  /*Form*/
+  form {
+    text-align: center;
+  }
+  input,
+  textarea,
+  select,
+  button {
+    font: inherit;
+    color: inherit;
+    box-sizing: content-box;
+  }
+  label,
+  label input {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    width: auto;
+  }
+  fieldset {
+    border: none;
+    width: 100%;
+    margin: 1.5em 0 1.5em 0;
+    padding: 1em 2em 1em 2em;
+    position: relative;
+    right: 2em;
+  }
+  legend {
+    position: relative;
+    top: 1em;
+    left: calc(50% - 1.2em);
+  }
+  input,
+  textarea {
+    display: block;
+    width: 75%;
+    border: none;
+    margin: 0.5em auto;
+    padding: 0.5em 1em;
+    text-align: center;
+    height: 3em;
+    vertical-align: middle;
+  }
+  textarea {
+    min-height: 5em;
+    text-align: left;
+  }
+  /*Searchbox*/
+  form.search {
+    margin: 0;
+    padding: 0;
+  }
+  form.search input {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 3em;
+  }
+  form.search input[type=text] {
+    width: calc(100% - 3em);
+  }
+  form.search input[type=submit] {
+    width: 3em;
+  }
+  /*Special layouts*/
+  code {
+    display: block;
+    width: 100%;
+    padding: 2em;
+    margin: 1em 0;
+    position: relative;
+    right: 2em;
+  }
+  article header {
+    width: calc(100% + 3em);
+    position: relative;
+    right: 2em;
+  }
+  article address p,
+  blockquote p,
+  q {
+    font-style: italic;
+  }
+  aside {
+    padding: 0 0 0 4em;
+  }
+  abbr {
+    border: none;
+    text-decoration: underline;
+  }
+  del {
+    text-decoration: line-through;
+  }
+  /*Footer*/
+  footer {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    top: 0.5em;
+  }
+  footer .full,
+  footer .half,
+  footer .threequarters,
+  footer .quarter {
+    margin: 0;
+    background: none;
+  }
+  footer .full {
+    width: 100%;
+  }
+  footer .half {
+    width: 50%;
+  }
+  footer .quarter {
+    width: 25%;
+  }
+  footer .threequarters {
+    width: 75%;
+  }
+  footer .content {
+    background: none;
+  }
+  footer .content h1 {
+    width: 100%;
+    margin: 0;
+    padding: 0.5em 0 0.5em 0;
+    text-align: center;
+    background: none;
+  }
+  footer a.button {
+    width: calc(50% - 2em);
+    margin: 0.25em 25%;
+  }
+  /*incompatibility message*/
+  #incompatibility {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 101;
+    padding: 10px;
+    background: #8b0000;
+    color: #FFF;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 50em) {
+  nav:hover {
+    height: 15em;
+    width: 100%;
+    overflow: visible;
+  }
+  nav:hover #dropdown-main {
+    width: calc(105% - 2em);
+    position: relative;
+    top: 1em;
+  }
+  nav a.dropdown {
+    position: relative;
+    top: 0.5em;
+  }
+  nav:hover a.dropdown {
+    width: 5em;
+    margin: 0;
+  }
+  nav:hover a {
+    width: 80%;
+    margin-left: 10%;
+    display: block;
+    position: relative;
+  }
+  #navbar h1 {
+    position: absolute;
+    right: 10%;
+    top: 0.3em;
+  }
+  #dropdown-main .dropdown-menu {
+    width: 100%;
+    position: relative;
+    right: 0;
+    overflow: hidden;
+  }
+  #dropdown-main .dropdown-menu a {
+    width: 80%;
+  }
+  #dropdown-main .dropdown-menu:hover .dropdown-content {
+    width: 80%;
+    position: relative;
+    left: 10%;
+    overflow-y: auto;
+  }
+  #dropdown-main .dropdown-menu:hover .dropdown-content a {
+    width: 100%;
+  }
+  .full,
+  .half,
+  .threequarters,
+  .quarter {
+    width: 100%;
+    margin: 0.5em 0;
+  }
+  footer .half,
+  footer .threequarters,
+  footer .quarter {
+    width: 99%;
+  }
+}
